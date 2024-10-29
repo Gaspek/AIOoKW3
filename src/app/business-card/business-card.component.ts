@@ -37,8 +37,13 @@ export class BusinessCardComponent {
     if (this.selected !== -1) {
       this.interests =  [...this.savedInterests];
       this.selected = -1;
+      this.savedInterests =[... this.interests];
     }
   }
 
+  saveInterest(): void {
+    this.selected = -1;
+    this.savedInterests = [... this.interests];
+  }
   
 }
